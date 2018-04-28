@@ -18,9 +18,4 @@ bash make.sh
 
 在安装了 brew 的情况下，上述组件均可由 `make.sh` 来安装。
 
-### 图标问题
-如果您的 lemon 出现没有图标的情况，  
-`make.sh` 已经帮助您打开了一个图标文件，您只需要按下 Command-C 将此**图像**(不是文件本身)拷贝下来，然后再 lemon 程序上右键->显示简介。  
-选中左上角的默认图标，然后按下 Command-V，即可替换图标。
-
 **Patched with ❤️ by [Victor Huang](https://imvictor.tech).**
