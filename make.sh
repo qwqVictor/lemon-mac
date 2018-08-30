@@ -6,6 +6,7 @@ cd project-lemon
 command -v qmake >/dev/null 2>&1 || { (brew tap cartr/qt4 && brew tap-pin cartr/qt4 && brew install qt@4) 2>&1 || { echo >&2 "Require brew but it's not installed.  Aborting."; exit 1; } }
 command -v rpl >/dev/null 2>&1 || { brew install rpl; }
 rpl "Q_OS_LINUX" "Q_OS_MAC" ./*
+rpl "(usage.ru_maxrss) * 1024" "(usage.ru_maxrss)" ./project-lemon/watcher_unix.c # macOS memory usage fix
 rm -f watcher_unix
 gcc -o watcher_unix watcher_unix.c
 echo >> lemon.pro
